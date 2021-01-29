@@ -1,0 +1,15 @@
+{
+  "name": "beagle-publish-generator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Jamesson penha & Tayrone araujo",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "node-localstorage": "^2.1.6"
+  }
+}
