@@ -5,11 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Begle publish generator</title>
     <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="index.js"></script>
+   
 </head>
 <body>
-    <div class="container">
-        <h1>Publish generator</h1>
-    </div>
+        <label>Selecione a plataforma</label>
+        <select name="select"> 
+            <option value="Android">Android</option>
+            <option value="IOS">IOS</option>
+            <option value="WEB">WEB</option>
+          </select>
+        <div>
+            <label>Versão:</label>
+            <input type="text" id="versao" />
+        </div>
+        <div>
+            <label>Novas Funcionalidades:</label>
+            <input type="text" id="novaFuncionalidade" onchange="onChangeFunc(event.target.value)" />
+            <button onclick="adicionarFuncionalidades(funcionalidade)">Adicionar</button>
+             <div id="novasFuncionalidades"></div>
+        </div>
+        <div>
+            <label>Impactos:</label>
+            <input type="text" id="impacto" onchange="onChangeImpact(event.target.value)">
+            <button onclick="adicionarImpactos(impact)">Adicionar</button>
+            <div id="impactos"></div>
+        </div>
+        <div>
+            <button>Gerar</button>
+        </div>
 </body>
 <script src="index.js"></script>
 </html>
