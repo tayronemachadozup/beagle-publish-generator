@@ -10,6 +10,7 @@
   },
   "devDependencies": {},
   "dependencies": {
+    "bootstrap": "^4.6.0",
     "node-localstorage": "^2.1.6"
   }
 }

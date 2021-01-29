@@ -6,18 +6,23 @@
     <title>Begle publish generator</title>
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="index.js"></script>
-   
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 <body>
-        <label>Selecione a plataforma</label>
-        <select name="select"> 
-            <option value="Android">Android</option>
-            <option value="IOS">IOS</option>
-            <option value="WEB">WEB</option>
-          </select>
-        <div>
-            <label>Versão:</label>
-            <input type="text" id="versao" />
+    <form class="container">
+        <div class="row">
+            <div class="col-6">
+            <label>Selecione a plataforma:</label>
+            <select class="form-select" name="select"> 
+                <option value="Android">Android</option>
+                <option value="IOS">IOS</option>
+                <option value="WEB">WEB</option>
+            </select>
+            </div>
+            <div class="col-6">
+                <label>Versão:</label>
+                <input class="form-control" type="text" id="versao" />
+            </div>
         </div>
         <div>
             <label>Novas Funcionalidades:</label>
@@ -32,8 +37,10 @@
             <div id="impactos"></div>
         </div>
         <div>
-            <button>Gerar</button>
+            <button class="btn btn-success">Publich</button>
         </div>
+    </form>
 </body>
 <script src="index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </html>
