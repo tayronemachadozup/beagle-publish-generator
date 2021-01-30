@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Begle publish generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>  
+<body>
+    <div class="container"> 
+        <div id="toast" class="content__toast"></div>
+        <div class="beagle__brand"> 
+            <img src='./../complete/assets/Beagle.svg'/>
+        </div>
+
+        <div class="plataform__properties">
+            <div>
+                <label>Selecione a plataforma:</label>
+                <select class="plataform__select" name="select"> 
+                    <option value="Android">Android</option>
+                    <option value="Ios">Ios</option>
+                    <option value="Web">Web</option>
+                </select>
+            </div>
+            <div>
+                <label>Versão:</label>
+                <input class="input__style" type="number" id="" />
+            </div>
+        </div>
+        <div class="plataform__news">
+            <div>
+                <label>Novas Funcionalidades:</label>
+                <input class="input__style__teste" type="text" id="functionalities-input"/>
+                <button class="button__style" onclick="addElementoToList('functionalities')">Adicionar</button>
+            </div>
+            <div>
+                <label>Impactos:</label>
+                <input class="input__style__teste" type="text" id="impacts-input" >
+                <button class="button__style" onclick="addElementoToList('impacts')">Adicionar</button>
+            </div>
+        </div>
+        <div class="news_list">
+            <div class="news__functionalities">
+                <ul class="functionalities__list" id="functionalities-list">
+            </div>
+            <div class="news__impacts">
+                <ul class="impacts__list" id="impacts-list">
+                </ul>
+            </div>
+        </div>
+
+        <button class="">Publicar</button>
+    </div>
+</body>
+ <script src="index.js"></script>
+</html>
