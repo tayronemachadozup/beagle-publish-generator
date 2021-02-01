@@ -1,23 +1,24 @@
-.logo {
-    text-align: center;
-    margin-left: 13%;
-  }
+body {
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  justify-content: center;
 
- body {
-    align-items: left;
-    align-content: left;
-    text-align: left;
-    margin-left: 30%;
-    font-family: 'Lato', sans-serif;
-  }
+}
 
-  footer {
-    text-align: left;
-  }
+.container{
 
-  .rights{
-    text-align: center;
-   justify-content: space-between;
-   width: 1500px;
-    
-  }
+}
+
+.container__content{
+
+}
+
+.brand {
+  text-align: center;
+}
+
+.footer__copyright{
+  display: flex;
+  justify-content: space-between;
+}
+

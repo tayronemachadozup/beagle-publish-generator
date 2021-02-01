@@ -42,3 +42,8 @@ function addElementoToList(elementId){
     
 }
 
+
+function createJson(){
+  return 
+}
+
