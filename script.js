@@ -1,4 +1,15 @@
 var fs = require('fs')
+const bodyParser = require('express-handlebars')
+const express = require('express')
+const app = express();
+
+app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.json())
+
+app.post('/form', function(req, res){
+  req.body.conteudo
+  console.log( req.body.conteudo)
+})
 
 if (typeof localStorage === "undefined" || localStorage === null) {
   var LocalStorage = require('node-localstorage').LocalStorage;
