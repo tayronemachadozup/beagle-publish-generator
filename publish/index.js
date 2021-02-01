@@ -25,7 +25,6 @@ function addElementoToList(elementId){
         if (functionalityValue === '') return creatToast('toast_warning', 'Insert a value of input')
 
         functionalitiseList.push(functionalityValue)
-        console.log('lista ->',functionalitiseList)
         const listItem = ` ${functionalitiseList.map(item => `<li class="news__functionalities__item">${item}</li>` ).join('')}`  
         functionalitiesListElement.innerHTML = listItem;
        
@@ -41,9 +40,3 @@ function addElementoToList(elementId){
     // functionalityValue = '';
     
 }
-
-
-function createJson(){
-  return 
-}
-
