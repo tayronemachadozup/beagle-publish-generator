@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Begle publish generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="toast" class="content__toast"></div>
+        <div class="beagle__brand">
+            <img src='./../complete/assets/Beagle.svg' />
+        </div>
+        <form action="http://localhost:3333/form" method="POST">
+            <div class="plataform__properties">
+                <div>
+                    <label>Selecione a plataforma:</label>
+                    <select class="plataform__select" id="plataform" name="beaglePlataform">
+                        <option value="ANDROID">ANDROID</option>
+                        <option value="IOS">IOS</option>
+                        <option value="WEB">WEB</option>
+                        <option value="IOS/ANDROID">IOS/ANDROID</option>
+                        <option value="IOS/ANDROID/WEB">IOS/ANDROID/WEB</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Versão:</label>
+                    <input class="input__style" type="text" id="version" name="beagleVersion" />
+                    <label>Link:</label>
+                    <input class="input__style__teste" type="text" id="version-link-input" name="linkVersion" />
+                </div>
+            </div>
+            <div class="plataform__news">
+                <div>
+                    <label>Novas Funcionalidades:</label>
+                    <input class="input__style__teste" type="text" id="functionalities-input" />
+                    <label>Link:</label>
+                    <input class="input__style__teste" type="text" id="functionalities-link-input" />
+                    <button type="button" class="button__style"
+                        onclick="addElementoToList('functionalities')">Adicionar</button>
+                </div>
+                <div>
+                    <label>Impactos:</label>
+                    <input class="input__style__teste" type="text" id="impacts-input" />
+                    <label>Link:</label>
+                    <input class="input__style__teste" type="text" id="impacts-link-input" />
+                    <button type="button" class="button__style"
+                        onclick="addElementoToList('impacts')">Adicionar</button>
+                </div>
+            </div>
+            <div class="news_list">
+                <div class="news__functionalities">
+                    <ul class="functionalities__list" id="functionalities-list">
+                </div>
+                <div class="news__impacts">
+                    <ul class="impacts__list" id="impacts-list">
+                    </ul>
+                </div>
+            </div>
+            <button type="submit" class="" onclick="">Publicar</button>
+        </form>
+
+
+    </div>
+</body>
+<script src="index.js"></script>
+
+</html>
