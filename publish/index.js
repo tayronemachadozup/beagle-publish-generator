@@ -62,7 +62,7 @@ function addElementoToList(elementId) {
     } else {
       functionalitiseList.push(functionalityValue)
     }
-    const listItem = ` ${functionalitiseList.map(item => `<input class="news__functionalities__item" value="${item}" name="newFuncionalities"/>`).join('')}`
+    const listItem = ` <label class="list-title">Funcionalidades</label> ${functionalitiseList.map(item => `<input class="news__functionalities__item" value="${item}" name="newFuncionalities"/>`).join('')}`
     functionalitiesListElement.innerHTML = listItem;
 
   } else if (elementId === 'impacts') {
@@ -72,7 +72,7 @@ function addElementoToList(elementId) {
     } else {
       impactsList.push(impactValue)
     }
-    const listItem = ` ${impactsList.map(item => `<input class="news__impacts__item" value="${item}" name="newImpacts"/>`).join('')}`
+    const listItem = `   <label class="list-title">Impactos</label> ${impactsList.map(item => `<input class="news__impacts__item" value="${item}" name="newImpacts"/>`).join('')}`
     impactslistElement.innerHTML = listItem;
   }
 
