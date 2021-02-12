@@ -15,6 +15,7 @@ app.post('/form', function (req, res) {
   const plataform = data.beaglePlataform;
   const funcionalities = data.newFuncionalities ? data.newFuncionalities : '';
   const impacts = data.newImpacts ? data.newImpacts : '';
+  const language = data.language;
   let newIcon = "";
   let link = "";
   let release = ""
@@ -118,10 +119,15 @@ app.post('/form', function (req, res) {
   const newplataform = "<a>" +
     plataform + "</a>" + newIcon
 
-  file = '../template/template-web.html';
+
+  if (language === "PT") {
+    file = '../template/template-web.html';
+  } else if (language === "EN") {
+    file = '../template/template-web-English.html';
+  }
 
   fs.readFile(file, function (err, data) {
-    if (err) throw err; data = data.toString(); data = data.replace('<div id="Release"></div>', release), data = data.replace('<div id="Funcionalidades"></div>', newFuncionalities), data = data.replace('<div id="Impactos"></div>', newImpacts), data = data.replace('<a id="Plataforma"></a>', newplataform)
+    if (err) throw err; data = data.toString(); data = data.replace('<div id="Release"></div>', release), data = data.replace('<div id="Funcionalities"></div>', newFuncionalities), data = data.replace('<div id="Impacts"></div>', newImpacts), data = data.replace('<a id="Plataform"></a>', newplataform)
     fs.writeFile('../complete/index.html', data, function (err) { err || console.log('Data replaced \n', data) })
   });
 });
