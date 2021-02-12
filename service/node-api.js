@@ -71,7 +71,7 @@ app.post('/form', function (req, res) {
   if (Array.isArray(impacts)) {
 
     newImpacts = "<div>" +
-      "<ul>"+
+      "<ul>" +
       impacts.map(function (item) {
         if (item.indexOf("<") != -1) {
           link = item.substring(item.indexOf("<") + 1).replace('>', '');
@@ -81,7 +81,7 @@ app.post('/form', function (req, res) {
           return " <li class='content__list__item'><img class='content__list__icon' src='https://docs.usebeagle.io/shared/Icon.svg'/>" + item + " </a></li>\n"
         }
       }).join('')
-    + "</ul>" +
+      + "</ul>" +
       "</div>"
   }
   else {

@@ -19,35 +19,6 @@ function creatToast(type, status) {
   setTimeout(function () { toastElement.className = 'content__toast' }, 3000);
 }
 
-function onSubmit() {
-
-  //   console.log(functionalitiseList.toString())
-  //   var xhr = new XMLHttpRequest();
-  // xhr.open("POST", 'http://localhost:3333/form', true);
-  // xhr.send(  
-  //     document.getElementById('version').value +
-  //     document.getElementById('plataform').value +
-  //     functionalitiseList +
-  //     impactsList
-  // );
-  // console.log(xhr.response)
-
-  $.ajax({
-    type: "POST",
-    url: 'http://localhost:3333/form',
-    data: functionalitiseList,
-    contentType: "application/json; charset=utf-8",
-    dataType: "json",
-    error: function () {
-      alert("Error");
-    },
-    success: function () {
-      alert("OK");
-    }
-  });
-
-}
-
 function addElementoToList(elementId) {
   let functionalityValue = document.getElementById('functionalities-input').value
   let functionalityLink = document.getElementById('functionalities-link-input').value
@@ -75,8 +46,4 @@ function addElementoToList(elementId) {
     const listItem = `   <label class="list-title">Impactos</label> ${impactsList.map(item => `<input class="news__impacts__item" value="${item}" name="newImpacts"/>`).join('')}`
     impactslistElement.innerHTML = listItem;
   }
-
-  // impactValue = '';
-  // functionalityValue = '';
-
 }
