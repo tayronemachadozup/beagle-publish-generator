@@ -24,7 +24,6 @@ function addElementoToList(elementId) {
   let functionalityLink = document.getElementById('functionalities-link-input').value
   let impactValue = document.getElementById('impacts-input').value
   let impactsLink = document.getElementById('impacts-link-input').value
-  let versionLink = document.getElementById('version-link-input').value
 
   if (elementId === 'functionalities') {
     if (functionalityValue === '') return creatToast('toast_warning', 'Insert a value of input')
