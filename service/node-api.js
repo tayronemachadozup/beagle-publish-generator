@@ -22,20 +22,35 @@ app.post('/form', function (req, res) {
   let newFuncionalities = ""
   let newImpacts = ""
 
-  if (linkVersion) {
-    release = "<div>" +
-      "<img src='https://docs.usebeagle.io/shared/Release.svg'>\n" +
-      "<div class='beagle__version__text'>" + "<b><a target='_blank' class='beagle__version__text' href='" + linkVersion + "'>VERSÃO " + version + "</a></b>"
-      + "</div>" +
-      "</div>\n"
+  if (language === "PT") {
+    if (linkVersion) {
+      release = "<div>" +
+        "<img src='https://docs.usebeagle.io/shared/Release.svg'>\n" +
+        "<div class='beagle__version__text'>" + "<b><a target='_blank' class='beagle__version__text' href='" + linkVersion + "'>VERSÃO " + version + "</a></b>"
+        + "</div>" +
+        "</div>\n"
+    }
+    else {
+      release = "<div>" +
+        "<img src='https://docs.usebeagle.io/shared/Release.svg'>\n" + "<b><p class='beagle__version__text'>VERSÃO " + version + "</p></b>"
+        + "</div>" +
+        "</div>\n"
+    }
+  } else if (language === "EN") {
+    if (linkVersion) {
+      release = "<div>" +
+        "<img src='https://docs.usebeagle.io/shared/Release.svg'>\n" +
+        "<div class='beagle__version__text'>" + "<b><a target='_blank' class='beagle__version__text' href='" + linkVersion + "'>VERSION " + version + "</a></b>"
+        + "</div>" +
+        "</div>\n"
+    }
+    else {
+      release = "<div>" +
+        "<img src='https://docs.usebeagle.io/shared/Release.svg'>\n" + "<b><p class='beagle__version__text'>VERSION " + version + "</p></b>"
+        + "</div>" +
+        "</div>\n"
+    }
   }
-  else {
-    release = "<div>" +
-      "<img src='https://docs.usebeagle.io/shared/Release.svg'>\n" + "<b><p class='beagle__version__text'>VERSÃO " + version + "</p></b>"
-      + "</div>" +
-      "</div>\n"
-  }
-
 
   if (Array.isArray(funcionalities)) {
     newFuncionalities = "<div>" +
